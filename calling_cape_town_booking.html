@@ -2,193 +2,288 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Calling Cape Town - Filming Booking</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        h2 {
-            color: #333;
-        }
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-        button {
-            padding: 10px;
-            background-color: #008CBA;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #005f73;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Booking Page</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { text-align: center; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    th { background-color: #f4f4f4; }
+    td.time { font-weight: bold; }
+    td.closed { background-color: #eee; color: #888; }
+    td.available { background-color: #e8f7e8; }  /* light green for available slots */
+    td.booked { background-color: #ffe0e0; }    /* light red for booked slots */
+    #bookingForm { max-width: 300px; }
+    #bookingForm label { font-weight: bold; }
+    #bookingForm input, #bookingForm select { width: 100%; padding: 5px; margin-top: 5px; }
+    #bookingForm button { margin-top: 10px; padding: 10px 15px; cursor: pointer; }
+    #status { margin-top: 15px; font-weight: bold; }
+  </style>
 </head>
 <body>
-    <h2>Calling Cape Town - Book Your Filming Slot</h2>
-    <p>Pick a time slot that works for you!</p>
-    
-    <table>
-        <tr>
-            <th>Day</th>
-            <th>Time Slot</th>
-            <th>Action</th>
-        </tr>
+  <h1>Training Session Booking</h1>
+  <p>Select an available 30-minute time slot from Tuesday to Saturday and enter your name to book. An email notification will be sent upon booking.</p>
 
-        <tr>
-            <td>Monday</td>
-            <td>Morning (5:30 - 8:00 AM)</td>
-            <td><button onclick="alert('Slot booked for Monday - Morning (5:30 - 8:00 AM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Monday</td>
-            <td>Midday (12:00 - 2:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Monday - Midday (12:00 - 2:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Monday</td>
-            <td>Evening (4:00 - 8:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Monday - Evening (4:00 - 8:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Monday</td>
-            <td>Late Evening (8:00 - 9:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Monday - Late Evening (8:00 - 9:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Tuesday</td>
-            <td>Morning (5:30 - 8:00 AM)</td>
-            <td><button onclick="alert('Slot booked for Tuesday - Morning (5:30 - 8:00 AM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Tuesday</td>
-            <td>Midday (12:00 - 2:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Tuesday - Midday (12:00 - 2:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Tuesday</td>
-            <td>Evening (4:00 - 8:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Tuesday - Evening (4:00 - 8:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Tuesday</td>
-            <td>Late Evening (8:00 - 9:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Tuesday - Late Evening (8:00 - 9:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Wednesday</td>
-            <td>Morning (5:30 - 8:00 AM)</td>
-            <td><button onclick="alert('Slot booked for Wednesday - Morning (5:30 - 8:00 AM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Wednesday</td>
-            <td>Midday (12:00 - 2:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Wednesday - Midday (12:00 - 2:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Wednesday</td>
-            <td>Late Evening (8:00 - 9:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Wednesday - Late Evening (8:00 - 9:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Thursday</td>
-            <td>Morning (5:30 - 8:00 AM)</td>
-            <td><button onclick="alert('Slot booked for Thursday - Morning (5:30 - 8:00 AM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Thursday</td>
-            <td>Midday (12:00 - 2:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Thursday - Midday (12:00 - 2:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Thursday</td>
-            <td>Evening (4:00 - 8:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Thursday - Evening (4:00 - 8:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Thursday</td>
-            <td>Late Evening (8:00 - 9:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Thursday - Late Evening (8:00 - 9:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Friday</td>
-            <td>Morning (5:30 - 8:00 AM)</td>
-            <td><button onclick="alert('Slot booked for Friday - Morning (5:30 - 8:00 AM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Friday</td>
-            <td>Midday (12:00 - 2:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Friday - Midday (12:00 - 2:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Friday</td>
-            <td>Evening (4:00 - 8:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Friday - Evening (4:00 - 8:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Friday</td>
-            <td>Late Evening (8:00 - 9:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Friday - Late Evening (8:00 - 9:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Saturday</td>
-            <td>Morning (5:30 - 8:00 AM)</td>
-            <td><button onclick="alert('Slot booked for Saturday - Morning (5:30 - 8:00 AM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Saturday</td>
-            <td>Midday (12:00 - 2:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Saturday - Midday (12:00 - 2:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Saturday</td>
-            <td>Evening (4:00 - 8:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Saturday - Evening (4:00 - 8:00 PM)')">Book</button></td>
-        </tr>
-    
-        <tr>
-            <td>Saturday</td>
-            <td>Late Evening (8:00 - 9:00 PM)</td>
-            <td><button onclick="alert('Slot booked for Saturday - Late Evening (8:00 - 9:00 PM)')">Book</button></td>
-        </tr>
-    
-    </table>
-    <p>Once you book, your slot will be confirmed. See you soon!</p>
+  <!-- Availability table -->
+  <table id="bookingTable">
+    <thead>
+      <tr>
+        <th>Time Slot</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="time">11:00 - 11:30 AM</td>
+        <td id="Tue1100" class="available">Available</td>
+        <td id="Wed1100" class="available">Available</td>
+        <td id="Thu1100" class="available">Available</td>
+        <td id="Fri1100" class="available">Available</td>
+        <td id="Sat1100" class="available">Available</td>
+      </tr>
+      <tr>
+        <td class="time">11:30 AM - 12:00 PM</td>
+        <td id="Tue1130" class="available">Available</td>
+        <td id="Wed1130" class="available">Available</td>
+        <td id="Thu1130" class="available">Available</td>
+        <td id="Fri1130" class="available">Available</td>
+        <td id="Sat1130" class="available">Available</td>
+      </tr>
+      <tr>
+        <td class="time">12:00 - 12:30 PM</td>
+        <td id="Tue1200" class="available">Available</td>
+        <td id="Wed1200" class="available">Available</td>
+        <td id="Thu1200" class="available">Available</td>
+        <td id="Fri1200" class="available">Available</td>
+        <td id="Sat1200" class="available">Available</td>
+      </tr>
+      <tr>
+        <td class="time">12:30 - 1:00 PM</td>
+        <td id="Tue1230" class="available">Available</td>
+        <td id="Wed1230" class="available">Available</td>
+        <td id="Thu1230" class="available">Available</td>
+        <td id="Fri1230" class="available">Available</td>
+        <td id="Sat1230" class="available">Available</td>
+      </tr>
+      <tr>
+        <td class="time">1:00 - 1:30 PM</td>
+        <td id="Tue1300" class="available">Available</td>
+        <td id="Wed1300" class="available">Available</td>
+        <td id="Thu1300" class="available">Available</td>
+        <td id="Fri1300" class="available">Available</td>
+        <td id="Sat1300" class="available">Available</td>
+      </tr>
+      <tr>
+        <td class="time">1:30 - 2:00 PM</td>
+        <td id="Tue1330" class="available">Available</td>
+        <td id="Wed1330" class="available">Available</td>
+        <td id="Thu1330" class="available">Available</td>
+        <td id="Fri1330" class="available">Available</td>
+        <td id="Sat1330" class="available">Available</td>
+      </tr>
+      <tr>
+        <td class="time">4:00 - 4:30 PM</td>
+        <td id="Tue1600" class="available">Available</td>
+        <td class="closed">Closed</td>
+        <td id="Thu1600" class="available">Available</td>
+        <td id="Fri1600" class="available">Available</td>
+        <td id="Sat1600" class="available">Available</td>
+      </tr>
+      <tr>
+        <td class="time">4:30 - 5:00 PM</td>
+        <td id="Tue1630" class="available">Available</td>
+        <td class="closed">Closed</td>
+        <td id="Thu1630" class="available">Available</td>
+        <td id="Fri1630" class="available">Available</td>
+        <td id="Sat1630" class="available">Available</td>
+      </tr>
+      <tr>
+        <td class="time">5:00 - 5:30 PM</td>
+        <td id="Tue1700" class="available">Available</td>
+        <td class="closed">Closed</td>
+        <td id="Thu1700" class="available">Available</td>
+        <td id="Fri1700" class="available">Available</td>
+        <td id="Sat1700" class="available">Available</td>
+      </tr>
+      <tr>
+        <td class="time">5:30 - 6:00 PM</td>
+        <td id="Tue1730" class="available">Available</td>
+        <td class="closed">Closed</td>
+        <td id="Thu1730" class="available">Available</td>
+        <td id="Fri1730" class="available">Available</td>
+        <td id="Sat1730" class="available">Available</td>
+      </tr>
+      <tr>
+        <td class="time">6:00 - 6:30 PM</td>
+        <td id="Tue1800" class="available">Available</td>
+        <td class="closed">Closed</td>
+        <td id="Thu1800" class="available">Available</td>
+        <td id="Fri1800" class="available">Available</td>
+        <td id="Sat1800" class="available">Available</td>
+      </tr>
+      <tr>
+        <td class="time">6:30 - 7:00 PM</td>
+        <td id="Tue1830" class="available">Available</td>
+        <td class="closed">Closed</td>
+        <td id="Thu1830" class="available">Available</td>
+        <td id="Fri1830" class="available">Available</td>
+        <td id="Sat1830" class="available">Available</td>
+      </tr>
+      <tr>
+        <td class="time">7:00 - 7:30 PM</td>
+        <td id="Tue1900" class="available">Available</td>
+        <td class="closed">Closed</td>
+        <td id="Thu1900" class="available">Available</td>
+        <td id="Fri1900" class="available">Available</td>
+        <td id="Sat1900" class="available">Available</td>
+      </tr>
+      <tr>
+        <td class="time">7:30 - 8:00 PM</td>
+        <td id="Tue1930" class="available">Available</td>
+        <td class="closed">Closed</td>
+        <td id="Thu1930" class="available">Available</td>
+        <td id="Fri1930" class="available">Available</td>
+        <td id="Sat1930" class="available">Available</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Booking form -->
+  <form id="bookingForm" action="https://formspree.io/jasonsamuels.samuels06@gmail.com" method="POST" target="formTarget">
+    <h3>Book a Time Slot</h3>
+    <label for="name">Athlete Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="timeslot">Choose a Time Slot:</label><br>
+    <select id="timeslot" name="timeslot" required>
+      <option value="Tuesday 11:00 - 11:30 AM">Tuesday 11:00 - 11:30 AM</option>
+      <option value="Tuesday 11:30 AM - 12:00 PM">Tuesday 11:30 AM - 12:00 PM</option>
+      <option value="Tuesday 12:00 - 12:30 PM">Tuesday 12:00 - 12:30 PM</option>
+      <option value="Tuesday 12:30 - 1:00 PM">Tuesday 12:30 - 1:00 PM</option>
+      <option value="Tuesday 1:00 - 1:30 PM">Tuesday 1:00 - 1:30 PM</option>
+      <option value="Tuesday 1:30 - 2:00 PM">Tuesday 1:30 - 2:00 PM</option>
+      <option value="Tuesday 4:00 - 4:30 PM">Tuesday 4:00 - 4:30 PM</option>
+      <option value="Tuesday 4:30 - 5:00 PM">Tuesday 4:30 - 5:00 PM</option>
+      <option value="Tuesday 5:00 - 5:30 PM">Tuesday 5:00 - 5:30 PM</option>
+      <option value="Tuesday 5:30 - 6:00 PM">Tuesday 5:30 - 6:00 PM</option>
+      <option value="Tuesday 6:00 - 6:30 PM">Tuesday 6:00 - 6:30 PM</option>
+      <option value="Tuesday 6:30 - 7:00 PM">Tuesday 6:30 - 7:00 PM</option>
+      <option value="Tuesday 7:00 - 7:30 PM">Tuesday 7:00 - 7:30 PM</option>
+      <option value="Tuesday 7:30 - 8:00 PM">Tuesday 7:30 - 8:00 PM</option>
+      <option value="Wednesday 11:00 - 11:30 AM">Wednesday 11:00 - 11:30 AM</option>
+      <option value="Wednesday 11:30 AM - 12:00 PM">Wednesday 11:30 AM - 12:00 PM</option>
+      <option value="Wednesday 12:00 - 12:30 PM">Wednesday 12:00 - 12:30 PM</option>
+      <option value="Wednesday 12:30 - 1:00 PM">Wednesday 12:30 - 1:00 PM</option>
+      <option value="Wednesday 1:00 - 1:30 PM">Wednesday 1:00 - 1:30 PM</option>
+      <option value="Wednesday 1:30 - 2:00 PM">Wednesday 1:30 - 2:00 PM</option>
+      <option value="Thursday 11:00 - 11:30 AM">Thursday 11:00 - 11:30 AM</option>
+      <option value="Thursday 11:30 AM - 12:00 PM">Thursday 11:30 AM - 12:00 PM</option>
+      <option value="Thursday 12:00 - 12:30 PM">Thursday 12:00 - 12:30 PM</option>
+      <option value="Thursday 12:30 - 1:00 PM">Thursday 12:30 - 1:00 PM</option>
+      <option value="Thursday 1:00 - 1:30 PM">Thursday 1:00 - 1:30 PM</option>
+      <option value="Thursday 1:30 - 2:00 PM">Thursday 1:30 - 2:00 PM</option>
+      <option value="Thursday 4:00 - 4:30 PM">Thursday 4:00 - 4:30 PM</option>
+      <option value="Thursday 4:30 - 5:00 PM">Thursday 4:30 - 5:00 PM</option>
+      <option value="Thursday 5:00 - 5:30 PM">Thursday 5:00 - 5:30 PM</option>
+      <option value="Thursday 5:30 - 6:00 PM">Thursday 5:30 - 6:00 PM</option>
+      <option value="Thursday 6:00 - 6:30 PM">Thursday 6:00 - 6:30 PM</option>
+      <option value="Thursday 6:30 - 7:00 PM">Thursday 6:30 - 7:00 PM</option>
+      <option value="Thursday 7:00 - 7:30 PM">Thursday 7:00 - 7:30 PM</option>
+      <option value="Thursday 7:30 - 8:00 PM">Thursday 7:30 - 8:00 PM</option>
+      <option value="Friday 11:00 - 11:30 AM">Friday 11:00 - 11:30 AM</option>
+      <option value="Friday 11:30 AM - 12:00 PM">Friday 11:30 AM - 12:00 PM</option>
+      <option value="Friday 12:00 - 12:30 PM">Friday 12:00 - 12:30 PM</option>
+      <option value="Friday 12:30 - 1:00 PM">Friday 12:30 - 1:00 PM</option>
+      <option value="Friday 1:00 - 1:30 PM">Friday 1:00 - 1:30 PM</option>
+      <option value="Friday 1:30 - 2:00 PM">Friday 1:30 - 2:00 PM</option>
+      <option value="Friday 4:00 - 4:30 PM">Friday 4:00 - 4:30 PM</option>
+      <option value="Friday 4:30 - 5:00 PM">Friday 4:30 - 5:00 PM</option>
+      <option value="Friday 5:00 - 5:30 PM">Friday 5:00 - 5:30 PM</option>
+      <option value="Friday 5:30 - 6:00 PM">Friday 5:30 - 6:00 PM</option>
+      <option value="Friday 6:00 - 6:30 PM">Friday 6:00 - 6:30 PM</option>
+      <option value="Friday 6:30 - 7:00 PM">Friday 6:30 - 7:00 PM</option>
+      <option value="Friday 7:00 - 7:30 PM">Friday 7:00 - 7:30 PM</option>
+      <option value="Friday 7:30 - 8:00 PM">Friday 7:30 - 8:00 PM</option>
+      <option value="Saturday 11:00 - 11:30 AM">Saturday 11:00 - 11:30 AM</option>
+      <option value="Saturday 11:30 AM - 12:00 PM">Saturday 11:30 AM - 12:00 PM</option>
+      <option value="Saturday 12:00 - 12:30 PM">Saturday 12:00 - 12:30 PM</option>
+      <option value="Saturday 12:30 - 1:00 PM">Saturday 12:30 - 1:00 PM</option>
+      <option value="Saturday 1:00 - 1:30 PM">Saturday 1:00 - 1:30 PM</option>
+      <option value="Saturday 1:30 - 2:00 PM">Saturday 1:30 - 2:00 PM</option>
+      <option value="Saturday 4:00 - 4:30 PM">Saturday 4:00 - 4:30 PM</option>
+      <option value="Saturday 4:30 - 5:00 PM">Saturday 4:30 - 5:00 PM</option>
+      <option value="Saturday 5:00 - 5:30 PM">Saturday 5:00 - 5:30 PM</option>
+      <option value="Saturday 5:30 - 6:00 PM">Saturday 5:30 - 6:00 PM</option>
+      <option value="Saturday 6:00 - 6:30 PM">Saturday 6:00 - 6:30 PM</option>
+      <option value="Saturday 6:30 - 7:00 PM">Saturday 6:30 - 7:00 PM</option>
+      <option value="Saturday 7:00 - 7:30 PM">Saturday 7:00 - 7:30 PM</option>
+      <option value="Saturday 7:30 - 8:00 PM">Saturday 7:30 - 8:00 PM</option>
+    </select><br><br>
+    <!-- Hidden field to set email subject -->
+    <input type="hidden" name="_subject" value="New Booking">
+    <button type="submit">Book Slot</button>
+  </form>
+
+  <!-- Hidden iframe to handle form submission without redirecting -->
+  <iframe name="formTarget" style="display:none;"></iframe>
+
+  <!-- Status message area -->
+  <div id="status"></div>
+
+  <!-- JavaScript for real-time table update and email submission -->
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var form = this;
+      var statusEl = document.getElementById('status');
+      var data = new FormData(form);
+      // Send form data to Formspree
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        if (response.ok) {
+          // Form submission successful
+          var name = data.get('name');
+          var slot = data.get('timeslot'); // e.g. "Tuesday 11:00 - 11:30 AM"
+          // Determine table cell ID from selected slot
+          var parts = slot.split(' ');
+          var day = parts[0]; 
+          var dashIndex = parts.indexOf('-');
+          var startParts = parts.slice(1, dashIndex);
+          var startTime = startParts[0];           // e.g. "11:00" or "11:30"
+          var startPeriod = startParts.length > 1 ? startParts[1] : parts[parts.length - 1];  // "AM" or "PM"
+          var timeParts = startTime.split(':');
+          var hour = parseInt(timeParts[0], 10);
+          var minute = parseInt(timeParts[1] || '0', 10);
+          if (startPeriod === 'PM' && hour !== 12) hour += 12;
+          if (startPeriod === 'AM' && hour === 12) hour = 0;
+          var dayShortMap = { 'Tuesday':'Tue', 'Wednesday':'Wed', 'Thursday':'Thu', 'Friday':'Fri', 'Saturday':'Sat' };
+          var cellId = dayShortMap[day] + String(hour).padStart(2, '0') + String(minute).padStart(2, '0');
+          // Update the table cell to show the booking
+          var cell = document.getElementById(cellId);
+          if (cell) {
+            cell.textContent = name;
+            cell.className = 'booked';
+          }
+          // Show success message and reset form
+          statusEl.textContent = 'Successfully booked ' + slot + ' for ' + name + '!';
+          statusEl.style.color = 'green';
+          form.reset();
+        } else {
+          statusEl.textContent = 'Error: Could not send booking. Please try again.';
+          statusEl.style.color = 'red';
+        }
+      }).catch(function(error) {
+        statusEl.textContent = 'Error: Could not send booking. Please try again.';
+        statusEl.style.color = 'red';
+      });
+    });
+  </script>
 </body>
 </html>
